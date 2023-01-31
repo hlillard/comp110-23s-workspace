@@ -30,7 +30,7 @@ if (five_word[4] == one_letter):
     count_inst = count_inst + 1
 
 if (count_inst == 0):
-    print("0 instances of " + one_letter + " found in " + five_word)
+    print("No instances of " + one_letter + " found in " + five_word)
 if (count_inst == 1):
     print("1 instance of " + one_letter + " found in " + five_word)
 if (count_inst == 2):
