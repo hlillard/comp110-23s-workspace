@@ -7,10 +7,10 @@ if (len(five_word) != 5):
     print("Error: Word must contain 5 characters")
     exit()
 one_letter: str = input("Choose a letter: ")
-print("Searching for " + one_letter + " in " + five_word)
 if (len(one_letter) != 1):
     print("Error: Letter must be a single character.")
     exit()
+print("Searching for " + one_letter + " in " + five_word)
 count_inst: int = 0
 
 if (five_word[0] == one_letter):
@@ -40,4 +40,4 @@ if (count_inst == 3):
 if (count_inst == 4):
     print("4 instances of " + one_letter + " found in " + five_word)
 if (count_inst == 5):
-    print("5 instances of " + one_letter + "found in " + five_word)
+    print("5 instances of " + one_letter + " found in " + five_word)
