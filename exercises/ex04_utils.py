@@ -1,32 +1,39 @@
-"""List Utility Functions."""
+"""EX04 - `List` Utility Functions."""
 
 __author__ = "730476613"
 
-def all(list: list[int], int) -> bool:
-    # determine whether each element in list of ints is equal to given int
-    if not list:
+
+def all(list_num: list[int], num: int) -> bool:
+    """Determine whether each element in list of ints is equal to given int."""
+    idx: int = 0
+    if len(list_num) == 0:
         return False
-    while list:
-        x = list.pop()
-        if x != int:
+    while idx < len(list_num):
+        if list_num[idx] != num:
             return False
-    return True
+        idx += 1
+    else:
+        return True
+
 
 def max(input: list[int]) -> int:
-    # find max integer in given list
+    """Find max integer in given list."""
     if len(input) == 0:
-        raise ValueError("max() arg is an empty sequence")
+        raise ValueError("max() arg is an empty sequence.")
+    idx: int = 0
     current_max = input[0]
-    for int in range(1, len(input)):
-        if input[int] > current_max:
-            current_max = input[int]
+    while idx < len(input):
+        if input[idx] > current_max:
+            current_max = input[idx]
+        idx += 1
     return current_max
 
+
 def is_equal(list1: list[int], list2: list[int]) -> bool:
-    # do 2 lists have the same length?
+    """See if two lists have the same length."""
     if len(list1) != len(list2):
         return False
-    for int in range(len(list1)):
-        if list1[int] != list1[int]:
-            return False
-    return True
+    if list1 == list2:
+        return True
+    else:
+        return False
