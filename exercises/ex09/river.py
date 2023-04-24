@@ -27,6 +27,7 @@ class River:
             if len(self.fish) >= 5:
                 bear.eat(3)
                 self.remove_fish(3)
+        return None
     
     def check_hunger(self):
         """Removes Bears that have starved from the bears list by checking hunger_scores."""
